@@ -1,0 +1,17 @@
+CUDA_VISIBLE_DEVICES=$1 python3 RelationPrediction/RTransE-Bert.py \
+    --data_dir ../data/FB15K-237/ \
+    --bert_model bert-base-cased \
+    --save_path ../save_model/FB15K-237/RTransE-Bert/ \
+    --test_path ../results/FB15K-237/RTransE-Bert/ \
+    --max_seq_length 128 \
+    --epochs 20 \
+    --train_batch_size 64 \
+    --test_batch_size 256 \
+    --lr 1e-5 \
+    --seed $2 \
+    --epsilon 0.9 \
+    --nums_threads 10 \
+    --nums_neg 10 \
+    --lambda_1 0.01 \
+    --lambda_2 2.0 \
+    --mu_1 0.2
