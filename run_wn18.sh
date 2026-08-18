@@ -1,4 +1,4 @@
-CUDA_VISIBLE_DEVICES=$1 python3 FB15K-237/RTransE-Bert.py \
+CUDA_VISIBLE_DEVICES=$1 python3 RelationPrediction/RTransE-Bert.py \
     --data_dir ../data/WN18/ \
     --bert_model bert-base-cased \
     --save_path ../save_model/WN18/RTransE-Bert/ \
